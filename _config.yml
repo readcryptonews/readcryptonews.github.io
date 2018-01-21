@@ -1,13 +1,34 @@
+# Where things are
+source:       .
+destination:  ./_site
+plugins_dir:  _plugins
+layouts_dir:  _layouts
+data_dir:     _data
+includes_dir: _includes
+
+# Site settings
 title: CryptoNews
+description: "Write your site description here. It will be used as your sites meta description as well!"
+baseurl: ""
+url: "https://readCryptoNews.com"
 email: crypto@stefanovic.ventures
-description: Learn about Bitcoin, other cryptocurrencies, blockchain technology, and more!
-author: "Bojan Stefanovic"
-url: "https://readcryptonews.com"
-twitter_username: bojanstef
-github_username:  bojanstef
+copyright_name: Stefanovic Ventures
 
 # Build settings
 markdown: kramdown
-theme: minima
+
+# Social media settings
+social:
+    twitter: https://twitter.com/bojanstef
+    github: https://github.com/readcryptonews/awesome-cryptocurrency
+    facebook: https://facebook.com/groups/2088720031357381/
+    mailchimp: https://ventures.us17.list-manage.com/subscribe/post?u=c63d18b8bcb8dd6fed8392781&id=1e32ec8aa3
+
+# Outputting
+liquid:
+    error_mode: warn
+
+# Themes
+theme: prologue-like-jekyll-theme
 plugins:
     - jekyll-feed

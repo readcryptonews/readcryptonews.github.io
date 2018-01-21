@@ -1,0 +1,33 @@
+<div id="header">
+
+    <div class="intro">
+
+        <!-- Logo -->
+        <div id="logo"></div>
+
+        <!-- Nav -->
+        {% include nav.html %}
+
+    </div>
+
+    <div class="bottom">
+
+        <!-- Social Icons -->
+        <ul class="icons">
+            {% if site.social.twitter %}
+            <li><a href="{{ site.social.twitter }}" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+            {% endif %}
+            {% if site.social.facebook %}
+            <li><a href="{{ site.social.facebook }}" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+            {% endif %}
+            {% if site.social.github %}
+            <li><a href="{{ site.social.github }}" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+            {% endif %}
+            {% if site.social.mailchimp %}
+            <li><a href="{{ site.social.mailchimp }}" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+            {% endif %}
+        </ul>
+
+    </div>
+
+</div>

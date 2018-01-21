@@ -1,6 +1,67 @@
----
-layout: default
----
-<div class="mx-auto" style="max-width: 700px;">
-    {{ content }}
-</div>
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>{{ site.title }}</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="/assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.4/css/mdb.min.css">
+</head>
+<body>
+
+    <div id="header">
+
+        <div class="intro">
+
+            <!-- Logo -->
+            <div id="logo"></div>
+
+            <nav id="nav">
+                <ul>
+                    <li><a href="{{ site.url }}#intro" id="intro-link" class="skel-layers-ignoreHref"><span class="icon fa-home">Introduction</span></a></li>
+                    <li><a href="{{ site.url }}#facebook" id="facebook-link" class="skel-layers-ignoreHref"><span class="icon fa-facebook-official">Facebook</span></a></li>
+                    <li><a href="{{ site.url }}#resources" id="resources-link" class="skel-layers-ignoreHref"><span class="icon fa-github-square">Resources</span></a></li>
+                    <li><a href="{{ site.url }}#blog" id="blog-link" class="skel-layers-ignoreHref"><span class="icon fa-th">Blog Posts</span></a></li>
+                </ul>
+            </nav>
+
+        </div>
+
+        <div class="bottom">
+
+            <!-- Social Icons -->
+            <ul class="icons">
+                {% if site.social.twitter %}
+                <li><a href="{{ site.social.twitter }}" target="_blank" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+                {% endif %}
+                {% if site.social.facebook %}
+                <li><a href="{{ site.social.facebook }}" target="_blank" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+                {% endif %}
+                {% if site.social.github %}
+                <li><a href="{{ site.social.github }}" target="_blank" class="icon fa-github"><span class="label">Github</span></a></li>
+                {% endif %}
+                {% if site.social.mailchimp %}
+                <li><a href="{{ site.social.mailchimp }}" target="_blank" class="icon fa-envelope"><span class="label">Email</span></a></li>
+                {% endif %}
+            </ul>
+
+        </div>
+
+    </div>
+
+
+    <!-- Main -->
+    <div id="main">
+        <div class="container my-4">
+            {{ content }}
+        </div>
+    </div>
+
+    <!-- Footer -->
+    {% include footer.html %}
+
+</body>
+</html>
